@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+body{
+	background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("Images/back.jpg");
+	background-postion:center;
+	background-size: cover;
+	image-rendering: pixelated;
+	padding: 50px;
+
+}
+.title{
+	font-family:  italic red serif;
+	font-size: 130px;
+	background-color: tomato;
+
+}
+.img-slider {
+    position: relative;
+    width: 100vw;
+    height: 40px;
+}
+.img-slider .slider-container {
+    position: absolute;
+    width: 300%;
+    height: 400px;
+    top: 0;
+    left:0;
+    overflow: hidden;
+    animation: slider 10s infinite;
+}
+.img-slider .slider-container .slide {
+    position: relative;
+    width: 32.33333333%;
+    float: left;
+    overflow: hidden
+}
+.img-slider .slider-container .slide img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+@keyframes slider {
+    0%, 25%, 100%{left: 0}
+    
+    30%, 55%{left: -100%}
+    
+    60%, 85%{left: -200%}
+}
+</style>
+<title>My Ecommerce Site</title>
+<link href="index.css" ref="stylesheet" type="text/css">
+</head>
+<body>
+	<p style="color:black" class="title">BTS MERCHANDISE</p>
+	<Section class="img-slider"><div class="slider-container">
+    
+    <div class="slide">
+      <img src="Images/img1.jpg" height="300px">
+    </div>
+    
+    <div class="slide">
+      <img src="Images/img2.jpg" height="300px">
+    </div>
+
+    <div class="slide">
+      <img src="Images/img3.jpg" height="300px">
+    </div>
+    
+  </div>
+</Section>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
+<marquee direction="left" scroll-behaviour="smooth"> <h1 style="color:ghostwhite;">Look at a glance of BTS products!!</h1></marquee>
+<br><br><br><br><br><br><br>
+<div  class="d-flex flex-row justify-content-around my-flex-container">
+<div class="p-2 my-flex-item">
+<img src="Images/frame.jpeg" height="270px" width="270px"><h5  style="color:white" ><br>Photo Sketch <a href="frame.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+<div class="p-2 my-flex-item">
+<img src="Images/army bomb.jpeg" height="270px" width="270px"><h5 style="color:white"><br>Army Bomb<a href="army bomb.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+<div class="p-2 my-flex-item">
+<img src="Images/bts keychain.jpg" height="270px" width="270"><h5 style="color:white"><br>Key Chain <a href="key chain.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+</div>
+<br><br>
+<div  class="d-flex flex-row justify-content-around my-flex-container">
+<div class="p-2 my-flex-item1">
+<img src="Images/bracelet.jpeg" height="270px" width="270px"><h5 style="color:white"><br>Bracelet <a href="bracelet.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5>
+</div>
+<div class="p-2 my-flex-item">
+<img src="Images/ring.jpeg" height="270px" width="270px"><h5 style="color:white"><br>Ring <a href="ring.html"><button style="float:right" class="w3-button w3-red w3-round-large">View </button></a></h5></div>
+<div class="p-2 my-flex-item">
+<img src="Images/bts backpack.jpg" height="270px" width="270px"><h5 style="color:white"><br> Backpack <a href="bag.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+</div>
+<br><br>
+<div  class="d-flex flex-row justify-content-around my-flex-container">
+<div class="p-2 my-flex-item">
+<img src="Images/pillow.jpeg" height="270px" width="270px"><h5 style="color:white"><br> Pillow <a href="pillow.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+<div class="p-2 my-flex-item">
+<img src="Images/bts cup.jpg" height="270px" width="270px"><h5 style="color:white"><br> Cup <a href="cup.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+<div class="p-2 my-flex-item">
+<img src="Images/BTS hoodie.jpg" height="270px" width="270px"><h5 style="color:white"> <br>Hoodie <a href="hoodie.html"><button style="float:right" class="w3-button w3-red w3-round-large">View</button></a></h5></div>
+</div>
+<br><br>
+<a href="#"><img src="Images/up.jpeg" height="40px" width="40px" style="float:right;"></a>
+<br><br><br><br>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#MySlideShow > div:gt(0)").hide();
+        setInterval(function () {
+            $('#MySlideShow > div:first')
+                .fadeOut(100)
+                .next()
+                .fadeIn(100)
+                .end()
+                .appendTo('#MySlideShow');
+        }, 1000);
+    });
+</script>
+</html>
